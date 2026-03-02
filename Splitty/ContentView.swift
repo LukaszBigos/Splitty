@@ -54,6 +54,7 @@ struct ContentView: View {
                 }
                 Section("Total amount to pay") {
                     Text(totalAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                        .foregroundColor(tipPercentage == 0 ? .red : .primary)
                 }
             }
             .navigationTitle("Splitty")
